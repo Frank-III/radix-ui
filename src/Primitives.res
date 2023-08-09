@@ -1,3 +1,35 @@
+module Avatar = {
+    module Root = {
+        @react.component @module("@radix-ui/react-avatar")
+        external make: (
+          ~asChild: bool=?,
+          ~children: React.element,
+          ~className: string =?
+        ) => React.element = "Root"
+    }
+    module Image = {
+        type status =  [ #idle | #loading | #loaded | #error ]
+        @react.component @module("@radix-ui/react-avatar")
+        external make: (
+            ~src: string=?,
+            ~alt: string=?,
+            ~asChild: bool=?,
+            ~onLoadingStatusChange: status => unit=?,
+            ~className: string =?
+        ) => React.element = "Image"
+    }
+    module FallBack = {
+        @react.component @module("@radix-ui/react-avatar")
+        external make: (
+            ~asChild: bool=?,
+            ~delayMs: int=?,
+            ~children: React.element,
+            ~className: string =?
+        ) => React.element = "Image"
+    }
+
+}
+
 module Dialog = {
   module Root = {
     @react.component @module("@radix-ui/react-dialog")

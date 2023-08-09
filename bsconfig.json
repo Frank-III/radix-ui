@@ -11,8 +11,9 @@
   "bs-dependencies": [
     "@rescript/react"
   ],
-  "reason": {
-    "react-jsx": 3
+  "jsx": {
+    "version": 4,
+    "mode": "classic"
   },
   "refmt": 3
 }

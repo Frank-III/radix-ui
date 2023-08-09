@@ -12,7 +12,7 @@
     "@rescript/react"
   ],
   "reason": {
-    "react-jsx": 4
+    "react-jsx": 3
   },
   "refmt": 3
 }

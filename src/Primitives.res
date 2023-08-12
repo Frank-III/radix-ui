@@ -1,33 +1,95 @@
 module Avatar = {
-    module Root = {
-        @react.component @module("@radix-ui/react-avatar")
-        external make: (
-          ~asChild: bool=?,
-          ~children: React.element,
-          ~className: string =?
-        ) => React.element = "Root"
-    }
-    module Image = {
-        type status =  [ #idle | #loading | #loaded | #error ]
-        @react.component @module("@radix-ui/react-avatar")
-        external make: (
-            ~src: string=?,
-            ~alt: string=?,
-            ~asChild: bool=?,
-            ~onLoadingStatusChange: status => unit=?,
-            ~className: string =?
-        ) => React.element = "Image"
-    }
-    module FallBack = {
-        @react.component @module("@radix-ui/react-avatar")
-        external make: (
-            ~asChild: bool=?,
-            ~delayMs: int=?,
-            ~children: React.element,
-            ~className: string =?
-        ) => React.element = "Image"
-    }
+  module Root = {
+    @react.component @module("@radix-ui/react-avatar")
+    external make: (
+      ~asChild: bool=?,
+      ~children: React.element,
+      ~className: string=?,
+    ) => React.element = "Root"
+  }
+  module Image = {
+    type status = [#idle | #loading | #loaded | #error]
+    @react.component @module("@radix-ui/react-avatar")
+    external make: (
+      ~src: string=?,
+      ~alt: string=?,
+      ~asChild: bool=?,
+      ~onLoadingStatusChange: status => unit=?,
+      ~className: string=?,
+    ) => React.element = "Image"
+  }
+  module FallBack = {
+    @react.component @module("@radix-ui/react-avatar")
+    external make: (
+      ~asChild: bool=?,
+      ~delayMs: int=?,
+      ~children: React.element,
+      ~className: string=?,
+    ) => React.element = "Image"
+  }
+}
 
+module AlertDialog = {
+  module Root = {
+    @react.component @module("@radix-ui/react-alert-dialog")
+    external make: (
+      ~children: React.element,
+      ~onOpenChange: bool => unit=?,
+      ~_open: bool=?,
+    ) => React.element = "Root"
+  }
+
+  module Trigger = {
+    @react.component @module("@radix-ui/react-alert-dialog")
+    external make: (
+      ~children: React.element,
+      ~asChild: bool=?,
+      ~onClick: unit => unit=?,
+    ) => React.element = "Trigger"
+  }
+
+  module Portal = {
+    @react.component @module("@radix-ui/react-alert-dialog")
+    external make: (~children: React.element) => React.element = "Portal"
+  }
+
+  module Overlay = {
+    @react.component @module("@radix-ui/react-alert-dialog")
+    external make: (~className: string=?) => React.element = "Overlay"
+  }
+
+  module Content = {
+    @react.component @module("@radix-ui/react-alert-dialog")
+    external make: (
+      ~asChild: bool=?,
+      ~className: string=?,
+      ~children: React.element,
+    ) => React.element = "Content"
+  }
+
+  module Title = {
+    @react.component @module("@radix-ui/react-alert-dialog")
+    external make: (
+      ~children: React.element,
+      ~className: string=?,
+      ~asChild: bool=?,
+    ) => React.element = "Title"
+  }
+
+  module Description = {
+    @react.component @module("@radix-ui/react-alert-dialog")
+    external make: (~children: React.element, ~asChild: bool=?) => React.element = "Description"
+  }
+
+  module Cancel = {
+    @react.component @module("@radix-ui/react-alert-dialog")
+    external make: (~children: React.element, ~asChild: bool=?) => React.element = "Cancel"
+  }
+
+  module Action = {
+    @react.component @module("@radix-ui/react-alert-dialog")
+    external make: (~children: React.element, ~asChild: bool=?) => React.element = "Action"
+  }
 }
 
 module Dialog = {
@@ -470,5 +532,56 @@ module Collapsible = {
       ~forceMount: bool=?,
       ~className: string=?,
     ) => React.element = "Content"
+  }
+}
+
+
+module HoverCard = {
+  module Root = {
+    @module("@radix-ui/react-hover-card") @react.component
+    external make: (
+      ~defaultOpen: bool=?,
+      ~open_: bool=?,
+      ~onOpenChange: bool => unit =?, 
+      ~openDelay: int =?, 
+      ~closeDelay: int=?, 
+      ~className: string=?,
+      ~children: React.element
+    ) => React.element = "Root"
+  }
+
+  module Trigger = {
+    @module("@radix-ui/react-hover-card") @react.component
+    external make: (
+      ~asChild: bool=?
+    ) => React.element = "Trigger"
+  }
+
+  module Portal = {
+
+  }
+
+  module Content = {
+    @module("@radix-ui/react-hover-card") @react.component
+    external make: (
+      ~asChild: bool=?,
+      ~forceMount: bool=?,
+      ~side: [#top | #right | #bottom | #left ]=?,
+      ~sideOffset: int =?, 
+      ~align: [#start | #center | #end ]=?, 
+      ~alignOffset: int =?, 
+      ~avoidCollisions: bool=?,
+      // ~collisionBoundary=?,
+      // ~collisionPadding=?
+      ~arrowPadding: int=?,
+      ~sticky: [#partial | #always]=?,
+      ~hideWhenDetached: bool=?,
+      ~className: string=?,
+      ~children: React.element
+    ) => React.element = "Root"
+  }
+
+  module Arrow = {
+
   }
 }

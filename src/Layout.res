@@ -1,5 +1,5 @@
 module Box = {
-    @react.element @module("@radix-ui/themes")
+    @react.component @module("@radix-ui/themes")
     external make: (
         ~display: [#"none" | #"inline" | #"inline-block" | #"block"]=?,
         ~p: [#0 | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9]=?,
@@ -26,7 +26,7 @@ module Box = {
 
 
 module Flex = {
-    @react.element @module("@radix-ui/themes")
+    @react.component @module("@radix-ui/themes")
     external make: (
         ~display: [#"none" | #"inline-flex" | #"flex"]=?,
         ~direction: [#"row" | #"column" | #"row-reverse" | #"column-reverse"]=?,
@@ -57,7 +57,7 @@ module Flex = {
 
 
 module Grid = {
-    @react.element @module("@radix-ui/themes")
+    @react.component @module("@radix-ui/themes")
     external make: (
         ~asChild: bool=?,
         ~display: [#"none" | #"inline-grid" | #"grid"]=?,
@@ -92,7 +92,7 @@ module Grid = {
 
 
 module Container = {
-    @react.element @module("@radix-ui/themes")
+    @react.component @module("@radix-ui/themes")
     external make: (
         ~size: [#1 | #2 | #3 | #4]=?,
         ~display: [#none | #block ]=?,
@@ -119,7 +119,7 @@ module Container = {
 
 
 module Section = {
-    @react.element @module("@radix-ui/themes")
+    @react.component @module("@radix-ui/themes")
     external make: (
         ~size: [ #1 | #2 | #3 ]=?,
         ~display: [#none | #block ]=?,

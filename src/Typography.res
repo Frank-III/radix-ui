@@ -1,8 +1,8 @@
 module Text = {
-  @react.element @module("@radix-ui/themes")
+  @react.component @module("@radix-ui/themes")
   external make: (
     ~asChild: bool=?,
-    ~as_: [#p | #div | #span]=?,
+    ~_as: [#p | #div | #span]=?,
     ~size: [#1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9]=?,
     ~weight: [#light | #regular | #medium | #bold]=?,
     ~align: [#left | #center | #right]=?,
@@ -38,10 +38,10 @@ module Text = {
 }
 
 module Heading = {
-  @react.element @module("@radix-ui/themes")
+  @react.component @module("@radix-ui/themes")
   external make: (
     ~asChild: bool=?,
-    ~as_: [#p | #div | #span]=?,
+    ~_as: [#p | #div | #span]=?,
     ~size: [#1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9]=?,
     ~weight: [#light | #regular | #medium | #bold]=?,
     ~align: [#left | #center | #right]=?,
@@ -77,7 +77,7 @@ module Heading = {
 }
 
 module BlockQuote = {
-  @react.element @module("@radix-ui/themes")
+  @react.component @module("@radix-ui/themes")
   external make: (
     ~size: [#1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9]=?,
     ~weight: [#light | #regular | #medium | #bold]=?,
@@ -113,7 +113,7 @@ module BlockQuote = {
 }
 
 module Code = {
-  @react.element @module("@radix-ui/themes")
+  @react.component @module("@radix-ui/themes")
   external make: (
     ~size: [#1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9]=?,
     ~variant: [#solid | #soft | #outline | #ghost]=?,
@@ -149,17 +149,17 @@ module Code = {
 }
 
 module Em = {
-  @react.element @module("@radix-ui/themes")
+  @react.component @module("@radix-ui/themes")
   external make: (~children: React.element) => React.element = "Em"
 }
 
 module Kbd = {
-  @react.element @module("@radix-ui/themes")
+  @react.component @module("@radix-ui/themes")
   external make: (~children: React.element) => React.element = "Kbd"
 }
 
 module Link = {
-  @react.element @module("@radix-ui/themes")
+  @react.component @module("@radix-ui/themes")
   external make: (
     ~asChild: bool=?,
     ~size: [#1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9]=?,
@@ -197,11 +197,11 @@ module Link = {
 }
 
 module Quote = {
-  @react.element @module("@radix-ui/themes")
+  @react.component @module("@radix-ui/themes")
   external make: (~children: React.element) => React.element = "Quote"
 }
 
 module Strong = {
-  @react.element @module("@radix-ui/themes")
+  @react.component @module("@radix-ui/themes")
   external make: (~children: React.element) => React.element = "Strong"
 }
